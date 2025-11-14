@@ -7,3 +7,6 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+# db/seeds.rb
+s = Student.create!(name: "Alice", email: "alice@example.com")
+s.assignments.create!(title: "Math Homework", due_date: Date.today + 1)
