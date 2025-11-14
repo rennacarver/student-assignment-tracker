@@ -1,0 +1,61 @@
+Started GET "/" for 127.0.0.1 at 2025-11-13 22:36:45 -0800
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='AssignmentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='AssignmentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AssignmentTracker'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/yennamac/.local/share/mise/installs/ruby/3.4.7/lib/ruby/gems/3.4.0/gems/railties-8.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/yennamac/.local/share/mise/installs/ruby/3.4.7/lib/ruby/gems/3.4.0/gems/railties-8.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 3.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.6ms)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='AssignmentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-14 06:40:43.244451', '2025-11-14 06:40:43.244453') RETURNING "key" /*application='AssignmentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AssignmentTracker'*/[0m
+Migrating to CreateAssignments (20251114064042)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='AssignmentTracker'*/[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "due_date" date, "status" varchar, "teacher_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_dc6e3a07db"
+FOREIGN KEY ("teacher_id")
+  REFERENCES "teachers" ("id")
+) /*application='AssignmentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_teacher_id" ON "assignments" ("teacher_id") /*application='AssignmentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251114064042') RETURNING "version" /*application='AssignmentTracker'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='AssignmentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AssignmentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='AssignmentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AssignmentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AssignmentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AssignmentTracker'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-11-13 22:59:10 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AssignmentTracker'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/yennamac/.local/share/mise/installs/ruby/3.4.7/lib/ruby/gems/3.4.0/gems/railties-8.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/yennamac/.local/share/mise/installs/ruby/3.4.7/lib/ruby/gems/3.4.0/gems/railties-8.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mCACHE ActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='AssignmentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AssignmentTracker'*/[0m
+Migrating to CreateStudents (20251114070044)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='AssignmentTracker'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='AssignmentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251114070044') RETURNING "version" /*application='AssignmentTracker'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='AssignmentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AssignmentTracker'*/[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='AssignmentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AssignmentTracker'*/[0m
+Migrating to DeviseCreateTeachers (20251114070334)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='AssignmentTracker'*/[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "teachers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='AssignmentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_teachers_on_email" ON "teachers" ("email") /*application='AssignmentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_teachers_on_reset_password_token" ON "teachers" ("reset_password_token") /*application='AssignmentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251114070334') RETURNING "version" /*application='AssignmentTracker'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='AssignmentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AssignmentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='AssignmentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AssignmentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AssignmentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='AssignmentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AssignmentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AssignmentTracker'*/[0m
