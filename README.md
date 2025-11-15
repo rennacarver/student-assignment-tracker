@@ -5,20 +5,52 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+- Ruby version
 
-* System dependencies
+- System dependencies
 
-* Configuration
+- Configuration
 
-* Database creation
+- Database creation
 
-* Database initialization
+- Database initialization
 
-* How to run the test suite
+- How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+- Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+- Deployment instructions
 
-* ...
+- ...
+
+- Getting Started
+
+1. Create the Project
+   rails new assignment_tracker
+2. Create the database
+   bin/rails db:create
+3. Start the server
+   bin/rails server
+4. Generate the database models
+   bin/rails g model Student name:string email:string
+   bin/rails g model Assignment title:string due_date:date completed:boolean student:references
+5. Migrate the database
+   bin/rails db:migrate
+6. Add controllers and routes
+   bin/rails g controller Students index show
+   bin/rails g controller Assignments index show
+   In config/routes.rb
+   resources :students do
+   resources :assignments
+   end
+
+# Defines the root path route ("/")
+
+root "assignments#index" 8. Update Models
+Student
+has_many :assignments, dependent: :destroy
+Assignments
+belongs_to :student 7. Add seeds
+bin/rails db:seed
+or RESET
+bin/rails db:reset

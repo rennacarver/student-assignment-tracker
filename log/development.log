@@ -1,0 +1,93 @@
+Started GET "/" for 127.0.0.1 at 2025-11-14 20:45:45 -0800
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/yennamac/.local/share/mise/installs/ruby/3.4.7/lib/ruby/gems/3.4.0/gems/railties-8.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/yennamac/.local/share/mise/installs/ruby/3.4.7/lib/ruby/gems/3.4.0/gems/railties-8.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 3.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-15 04:47:55.113539', '2025-11-15 04:47:55.113540') RETURNING "key" /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+Migrating to CreateStudents (20251115044740)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251115044740') RETURNING "version" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+Migrating to CreateAssignments (20251115044741)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "due_date" date, "completed" boolean, "student_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c204dbd6ce"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_student_id" ON "assignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251115044741') RETURNING "version" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" /*application='StudentTracker'*/[0m
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "created_at", "updated_at") VALUES ('Alice Johnson', 'alice@example.com', '2025-11-15 04:55:42.906915', '2025-11-15 04:55:42.906915') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "created_at", "updated_at") VALUES ('Bob Smith', 'bob@example.com', '2025-11-15 04:55:42.914691', '2025-11-15 04:55:42.914691') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "created_at", "updated_at") VALUES ('Charlie Lee', 'charlie@example.com', '2025-11-15 04:55:42.915808', '2025-11-15 04:55:42.915808') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" /*application='StudentTracker'*/[0m
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 /*application='StudentTracker'*/[0m
+  [1m[36mStudent Destroy (0.5ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = 1 /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 2 /*application='StudentTracker'*/[0m
+  [1m[36mStudent Destroy (0.0ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = 2 /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 3 /*application='StudentTracker'*/[0m
+  [1m[36mStudent Destroy (0.0ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = 3 /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "created_at", "updated_at") VALUES ('Alice Johnson', 'alice@example.com', '2025-11-15 04:57:31.035826', '2025-11-15 04:57:31.035826') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "created_at", "updated_at") VALUES ('Bob Smith', 'bob@example.com', '2025-11-15 04:57:31.037298', '2025-11-15 04:57:31.037298') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "created_at", "updated_at") VALUES ('Charlie Lee', 'charlie@example.com', '2025-11-15 04:57:31.038381', '2025-11-15 04:57:31.038381') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.4ms)[0m  [1m[32mINSERT INTO "assignments" ("title", "due_date", "completed", "student_id", "created_at", "updated_at") VALUES ('Math Homework', '2025-11-15', FALSE, 4, '2025-11-15 04:57:31.042291', '2025-11-15 04:57:31.042291') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.4ms)[0m  [1m[32mINSERT INTO "assignments" ("title", "due_date", "completed", "student_id", "created_at", "updated_at") VALUES ('Science Project', '2025-11-17', FALSE, 4, '2025-11-15 04:57:31.043617', '2025-11-15 04:57:31.043617') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.4ms)[0m  [1m[32mINSERT INTO "assignments" ("title", "due_date", "completed", "student_id", "created_at", "updated_at") VALUES ('History Essay', '2025-11-19', TRUE, 4, '2025-11-15 04:57:31.044865', '2025-11-15 04:57:31.044865') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.4ms)[0m  [1m[32mINSERT INTO "assignments" ("title", "due_date", "completed", "student_id", "created_at", "updated_at") VALUES ('Math Homework', '2025-11-15', FALSE, 5, '2025-11-15 04:57:31.046149', '2025-11-15 04:57:31.046149') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.4ms)[0m  [1m[32mINSERT INTO "assignments" ("title", "due_date", "completed", "student_id", "created_at", "updated_at") VALUES ('Science Project', '2025-11-17', FALSE, 5, '2025-11-15 04:57:31.047359', '2025-11-15 04:57:31.047359') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.5ms)[0m  [1m[32mINSERT INTO "assignments" ("title", "due_date", "completed", "student_id", "created_at", "updated_at") VALUES ('History Essay', '2025-11-19', TRUE, 5, '2025-11-15 04:57:31.048580', '2025-11-15 04:57:31.048580') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.4ms)[0m  [1m[32mINSERT INTO "assignments" ("title", "due_date", "completed", "student_id", "created_at", "updated_at") VALUES ('Math Homework', '2025-11-15', FALSE, 6, '2025-11-15 04:57:31.049926', '2025-11-15 04:57:31.049926') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.4ms)[0m  [1m[32mINSERT INTO "assignments" ("title", "due_date", "completed", "student_id", "created_at", "updated_at") VALUES ('Science Project', '2025-11-17', FALSE, 6, '2025-11-15 04:57:31.051168', '2025-11-15 04:57:31.051168') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.4ms)[0m  [1m[32mINSERT INTO "assignments" ("title", "due_date", "completed", "student_id", "created_at", "updated_at") VALUES ('History Essay', '2025-11-19', TRUE, 6, '2025-11-15 04:57:31.052404', '2025-11-15 04:57:31.052404') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "students" /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments" /*application='StudentTracker'*/[0m
