@@ -25,6 +25,9 @@ Project Carver needs a platform where students can chat with their tutors, see t
 - Silly human errors like running the server but not the asset watcher won't be caught by AI
 - Create a problem and AI usually has much better chance of figuring out the original issue. Ex. Tailwind was collapsing a div with a button inside. Adding a border fixed the issue and revealed something subtle about the way tailwind handles rendering.
 - AI is available within the dev console of chrome for further debugging
+- Ruby on Rails automates so much of the backend for getting started compared to Express/Node
+       - I was really impressed how new and edit forms shared so many components
+       - Surprised by how easy it was to establish routes, controllers, views, and forms all at once with just a few lines of code
 
 ## Challenges
 - By integrating the assignments into the students show page, it caused quite a few conflicts with nested routes
