@@ -1318,3 +1318,1732 @@ Migrating to AddStatusToAssignments (20251116044039)
   [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+Started GET "/students/4" for 127.0.0.1 at 2025-11-15 20:41:43 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "4"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 4 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:63:in 'StudentsController#set_student'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered students/show.html.erb within layouts/application (Duration: 7.8ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | GC: 0.4ms)
+Completed 200 OK in 23ms (Views: 12.7ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 2.3ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Destroy (0.7ms)[0m  [1m[31mDELETE FROM "assignments" WHERE "assignments"."id" = 1 /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "assignments" WHERE "assignments"."id" = 2 /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "assignments" WHERE "assignments"."id" = 3 /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "assignments" WHERE "assignments"."id" = 4 /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Destroy (0.4ms)[0m  [1m[31mDELETE FROM "assignments" WHERE "assignments"."id" = 5 /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "assignments" WHERE "assignments"."id" = 6 /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Destroy (0.4ms)[0m  [1m[31mDELETE FROM "assignments" WHERE "assignments"."id" = 7 /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "assignments" WHERE "assignments"."id" = 8 /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "assignments" WHERE "assignments"."id" = 9 /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 4 /*application='StudentTracker'*/[0m
+  [1m[36mStudent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = 4 /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 5 /*application='StudentTracker'*/[0m
+  [1m[36mStudent Destroy (0.0ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = 5 /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 6 /*application='StudentTracker'*/[0m
+  [1m[36mStudent Destroy (0.0ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = 6 /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "email", "created_at", "updated_at") VALUES ('Alice', 'alice@example.com', '2025-11-16 04:43:44.154063', '2025-11-16 04:43:44.154063') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+Started GET "/students/4" for 127.0.0.1 at 2025-11-15 20:44:00 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "4"}
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 4 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:63:in 'StudentsController#set_student'
+Completed 404 Not Found in 8ms (ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Student with 'id'="4"):
+  
+app/controllers/students_controller.rb:63:in 'StudentsController#set_student'
+Started GET "/students" for 127.0.0.1 at 2025-11-15 20:44:19 -0800
+Processing by StudentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" /*action='index',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/index.html.erb:28
+  Rendered students/index.html.erb within layouts/application (Duration: 8.5ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 13.9ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/7" for 127.0.0.1 at 2025-11-15 20:44:23 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "7"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 7 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:63:in 'StudentsController#set_student'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered students/show.html.erb within layouts/application (Duration: 3.4ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_student_id" ON "assignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "students" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "email" varchar, "name" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aassignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aassignments_on_student_id" ON "aassignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aassignments" ("id","completed","created_at","due_date","status","student_id","title","updated_at")
+                     SELECT "id","completed","created_at","due_date","status","student_id","title","updated_at" FROM "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c204dbd6ce"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_student_id" ON "assignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "assignments" ("id","completed","created_at","due_date","status","student_id","title","updated_at")
+                     SELECT "id","completed","created_at","due_date","status","student_id","title","updated_at" FROM "aassignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aassignments" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20251116044039) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20251115044741),
+(20251115044740); /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-16 04:44:37.160555', '2025-11-16 04:44:37.160555') RETURNING "key" /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'fde5eaf8e4361214e22a93a37b275a0be161df0e', '2025-11-16 04:44:37.161537', '2025-11-16 04:44:37.161538') RETURNING "key" /*application='StudentTracker'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_student_id" ON "assignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "students" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "email" varchar, "name" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aassignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aassignments_on_student_id" ON "aassignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aassignments" ("id","completed","created_at","due_date","status","student_id","title","updated_at")
+                     SELECT "id","completed","created_at","due_date","status","student_id","title","updated_at" FROM "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c204dbd6ce"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_student_id" ON "assignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "assignments" ("id","completed","created_at","due_date","status","student_id","title","updated_at")
+                     SELECT "id","completed","created_at","due_date","status","student_id","title","updated_at" FROM "aassignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aassignments" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20251116044039) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20251115044741),
+(20251115044740); /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-16 04:44:37.173333', '2025-11-16 04:44:37.173333') RETURNING "key" /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-11-16 04:44:37.174019' WHERE "ar_internal_metadata"."key" = 'environment' /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'fde5eaf8e4361214e22a93a37b275a0be161df0e', '2025-11-16 04:44:37.174617', '2025-11-16 04:44:37.174618') RETURNING "key" /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Load (0.0ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" /*application='StudentTracker'*/[0m
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO "students" ("created_at", "email", "name", "updated_at") VALUES ('2025-11-16 04:44:37.186597', 'alice@example.com', 'Alice', '2025-11-16 04:44:37.186597') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+Started GET "/students" for 127.0.0.1 at 2025-11-15 20:44:41 -0800
+Processing by StudentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" /*action='index',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/index.html.erb:28
+  Rendered students/index.html.erb within layouts/application (Duration: 7.7ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 12.1ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 2.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2025-11-15 20:44:43 -0800
+Processing by StudentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" /*action='index',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/index.html.erb:28
+  Rendered students/index.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mStudent Load (2.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 /* loading for pp */ LIMIT 11 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" /*application='StudentTracker'*/[0m
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Load (0.0ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 /*application='StudentTracker'*/[0m
+  [1m[36mStudent Destroy (0.4ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = 1 /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO "students" ("created_at", "email", "name", "updated_at") VALUES ('2025-11-16 04:47:16.376125', 'alice@example.com', 'Alice', '2025-11-16 04:47:16.376125') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_student_id" ON "assignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "students" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "email" varchar, "name" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aassignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aassignments_on_student_id" ON "aassignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aassignments" ("id","completed","created_at","due_date","status","student_id","title","updated_at")
+                     SELECT "id","completed","created_at","due_date","status","student_id","title","updated_at" FROM "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c204dbd6ce"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_student_id" ON "assignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "assignments" ("id","completed","created_at","due_date","status","student_id","title","updated_at")
+                     SELECT "id","completed","created_at","due_date","status","student_id","title","updated_at" FROM "aassignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aassignments" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20251116044039) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20251115044741),
+(20251115044740); /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-16 04:47:27.963744', '2025-11-16 04:47:27.963745') RETURNING "key" /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'fde5eaf8e4361214e22a93a37b275a0be161df0e', '2025-11-16 04:47:27.964901', '2025-11-16 04:47:27.964902') RETURNING "key" /*application='StudentTracker'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_student_id" ON "assignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "students" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "email" varchar, "name" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aassignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aassignments_on_student_id" ON "aassignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aassignments" ("id","completed","created_at","due_date","status","student_id","title","updated_at")
+                     SELECT "id","completed","created_at","due_date","status","student_id","title","updated_at" FROM "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c204dbd6ce"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_student_id" ON "assignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "assignments" ("id","completed","created_at","due_date","status","student_id","title","updated_at")
+                     SELECT "id","completed","created_at","due_date","status","student_id","title","updated_at" FROM "aassignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aassignments" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20251116044039) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20251115044741),
+(20251115044740); /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-16 04:47:27.976238', '2025-11-16 04:47:27.976239') RETURNING "key" /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-11-16 04:47:27.976908' WHERE "ar_internal_metadata"."key" = 'environment' /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'fde5eaf8e4361214e22a93a37b275a0be161df0e', '2025-11-16 04:47:27.977503', '2025-11-16 04:47:27.977503') RETURNING "key" /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Load (0.0ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" /*application='StudentTracker'*/[0m
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO "students" ("created_at", "email", "name", "updated_at") VALUES ('2025-11-16 04:47:27.989527', 'alice@example.com', 'Alice', '2025-11-16 04:47:27.989527') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Load (4.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments" WHERE "assignments"."student_id" = 2 /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments" WHERE "assignments"."student_id" = 2 /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Load (0.6ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 2 /* loading for pp */ LIMIT 11 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_student_id" ON "assignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "students" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "email" varchar, "name" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aassignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aassignments_on_student_id" ON "aassignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aassignments" ("id","completed","created_at","due_date","status","student_id","title","updated_at")
+                     SELECT "id","completed","created_at","due_date","status","student_id","title","updated_at" FROM "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c204dbd6ce"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_student_id" ON "assignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "assignments" ("id","completed","created_at","due_date","status","student_id","title","updated_at")
+                     SELECT "id","completed","created_at","due_date","status","student_id","title","updated_at" FROM "aassignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aassignments" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20251116044039) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20251115044741),
+(20251115044740); /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-16 04:50:07.619339', '2025-11-16 04:50:07.619339') RETURNING "key" /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'fde5eaf8e4361214e22a93a37b275a0be161df0e', '2025-11-16 04:50:07.620482', '2025-11-16 04:50:07.620483') RETURNING "key" /*application='StudentTracker'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_student_id" ON "assignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "students" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "email" varchar, "name" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aassignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aassignments_on_student_id" ON "aassignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aassignments" ("id","completed","created_at","due_date","status","student_id","title","updated_at")
+                     SELECT "id","completed","created_at","due_date","status","student_id","title","updated_at" FROM "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c204dbd6ce"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_student_id" ON "assignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "assignments" ("id","completed","created_at","due_date","status","student_id","title","updated_at")
+                     SELECT "id","completed","created_at","due_date","status","student_id","title","updated_at" FROM "aassignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aassignments" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20251116044039) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20251115044741),
+(20251115044740); /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-16 04:50:07.631842', '2025-11-16 04:50:07.631843') RETURNING "key" /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-11-16 04:50:07.632529' WHERE "ar_internal_metadata"."key" = 'environment' /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'fde5eaf8e4361214e22a93a37b275a0be161df0e', '2025-11-16 04:50:07.633150', '2025-11-16 04:50:07.633150') RETURNING "key" /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Load (0.0ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO "students" ("created_at", "email", "name", "updated_at") VALUES ('2025-11-16 04:50:07.646167', 'alice@example.com', 'Alice', '2025-11-16 04:50:07.646167') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Load (1.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Count (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments" WHERE "assignments"."student_id" = 2 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_student_id" ON "assignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "students" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "email" varchar, "name" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aassignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aassignments_on_student_id" ON "aassignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aassignments" ("id","completed","created_at","due_date","status","student_id","title","updated_at")
+                     SELECT "id","completed","created_at","due_date","status","student_id","title","updated_at" FROM "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c204dbd6ce"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_student_id" ON "assignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "assignments" ("id","completed","created_at","due_date","status","student_id","title","updated_at")
+                     SELECT "id","completed","created_at","due_date","status","student_id","title","updated_at" FROM "aassignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aassignments" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20251116044039) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20251115044741),
+(20251115044740); /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-16 04:52:19.171569', '2025-11-16 04:52:19.171570') RETURNING "key" /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'fde5eaf8e4361214e22a93a37b275a0be161df0e', '2025-11-16 04:52:19.172681', '2025-11-16 04:52:19.172682') RETURNING "key" /*application='StudentTracker'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_student_id" ON "assignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "students" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "email" varchar, "name" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aassignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aassignments_on_student_id" ON "aassignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aassignments" ("id","completed","created_at","due_date","status","student_id","title","updated_at")
+                     SELECT "id","completed","created_at","due_date","status","student_id","title","updated_at" FROM "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c204dbd6ce"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_student_id" ON "assignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "assignments" ("id","completed","created_at","due_date","status","student_id","title","updated_at")
+                     SELECT "id","completed","created_at","due_date","status","student_id","title","updated_at" FROM "aassignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aassignments" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20251116044039) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20251115044741),
+(20251115044740); /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-16 04:52:19.183870', '2025-11-16 04:52:19.183870') RETURNING "key" /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-11-16 04:52:19.184504' WHERE "ar_internal_metadata"."key" = 'environment' /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'fde5eaf8e4361214e22a93a37b275a0be161df0e', '2025-11-16 04:52:19.185094', '2025-11-16 04:52:19.185094') RETURNING "key" /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Load (0.0ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" /*application='StudentTracker'*/[0m
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO "students" ("created_at", "email", "name", "updated_at") VALUES ('2025-11-16 04:52:19.199948', 'alice.johnson@example.com', 'Alice Johnson', '2025-11-16 04:52:19.199948') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+Migrating to AddDescriptionToAssignments (20251116045329)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "assignments" ADD "description" text /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251116045329') RETURNING "version" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "description" text, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_student_id" ON "assignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "students" /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "email" varchar, "name" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aassignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "description" text, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aassignments_on_student_id" ON "aassignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aassignments" ("id","completed","created_at","description","due_date","status","student_id","title","updated_at")
+                     SELECT "id","completed","created_at","description","due_date","status","student_id","title","updated_at" FROM "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "description" text, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c204dbd6ce"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_student_id" ON "assignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "assignments" ("id","completed","created_at","description","due_date","status","student_id","title","updated_at")
+                     SELECT "id","completed","created_at","description","due_date","status","student_id","title","updated_at" FROM "aassignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aassignments" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20251116045329) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20251116044039),
+(20251115044741),
+(20251115044740); /*application='StudentTracker'*/[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-16 04:54:10.394809', '2025-11-16 04:54:10.394810') RETURNING "key" /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f4a1c2f644e5f95e7942a3d5fe55e69834b14f03', '2025-11-16 04:54:10.395912', '2025-11-16 04:54:10.395913') RETURNING "key" /*application='StudentTracker'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "description" text, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_student_id" ON "assignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "students" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "email" varchar, "name" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aassignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "description" text, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aassignments_on_student_id" ON "aassignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aassignments" ("id","completed","created_at","description","due_date","status","student_id","title","updated_at")
+                     SELECT "id","completed","created_at","description","due_date","status","student_id","title","updated_at" FROM "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "assignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "completed" boolean, "created_at" datetime(6) NOT NULL, "description" text, "due_date" date, "status" varchar, "student_id" integer NOT NULL, "title" varchar, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c204dbd6ce"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_assignments_on_student_id" ON "assignments" ("student_id") /*application='StudentTracker'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "assignments" ("id","completed","created_at","description","due_date","status","student_id","title","updated_at")
+                     SELECT "id","completed","created_at","description","due_date","status","student_id","title","updated_at" FROM "aassignments" /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aassignments" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20251116045329) /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20251116044039),
+(20251115044741),
+(20251115044740); /*application='StudentTracker'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-16 04:54:10.407820', '2025-11-16 04:54:10.407820') RETURNING "key" /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-11-16 04:54:10.408493' WHERE "ar_internal_metadata"."key" = 'environment' /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f4a1c2f644e5f95e7942a3d5fe55e69834b14f03', '2025-11-16 04:54:10.409081', '2025-11-16 04:54:10.409081') RETURNING "key" /*application='StudentTracker'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" /*application='StudentTracker'*/[0m
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO "students" ("created_at", "email", "name", "updated_at") VALUES ('2025-11-16 04:54:10.422355', 'alice.johnson@example.com', 'Alice Johnson', '2025-11-16 04:54:10.422355') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.5ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.426978', 'Auto-generated assignment for Alice Johnson.', '2025-11-20', 'late', 1, 'History Reading', '2025-11-16 04:54:10.426978') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.5ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.428842', 'Auto-generated assignment for Alice Johnson.', '2025-11-16', 'submitted', 1, 'History Reading', '2025-11-16 04:54:10.428842') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.5ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.430199', 'Auto-generated assignment for Alice Johnson.', '2025-11-29', 'late', 1, 'Programming Project', '2025-11-16 04:54:10.430199') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("created_at", "email", "name", "updated_at") VALUES ('2025-11-16 04:54:10.431579', 'bob.martinez@example.com', 'Bob Martinez', '2025-11-16 04:54:10.431579') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.7ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.433226', 'Auto-generated assignment for Bob Martinez.', '2025-11-26', 'late', 2, 'Math Homework', '2025-11-16 04:54:10.433226') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.5ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.434997', 'Auto-generated assignment for Bob Martinez.', '2025-11-17', 'late', 2, 'History Reading', '2025-11-16 04:54:10.434997') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.5ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.436354', 'Auto-generated assignment for Bob Martinez.', '2025-12-04', 'submitted', 2, 'Math Homework', '2025-11-16 04:54:10.436354') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.5ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.437667', 'Auto-generated assignment for Bob Martinez.', '2025-11-25', 'pending', 2, 'Programming Project', '2025-11-16 04:54:10.437667') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("created_at", "email", "name", "updated_at") VALUES ('2025-11-16 04:54:10.438979', 'charlie.kim@example.com', 'Charlie Kim', '2025-11-16 04:54:10.438979') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.5ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.440195', 'Auto-generated assignment for Charlie Kim.', '2025-11-22', 'submitted', 3, 'Art Portfolio', '2025-11-16 04:54:10.440195') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.5ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.441510', 'Auto-generated assignment for Charlie Kim.', '2025-11-23', 'pending', 3, 'English Essay', '2025-11-16 04:54:10.441510') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.4ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.442800', 'Auto-generated assignment for Charlie Kim.', '2025-11-16', 'late', 3, 'Art Portfolio', '2025-11-16 04:54:10.442800') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO "students" ("created_at", "email", "name", "updated_at") VALUES ('2025-11-16 04:54:10.452028', 'diana.patel@example.com', 'Diana Patel', '2025-11-16 04:54:10.452028') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.5ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.453499', 'Auto-generated assignment for Diana Patel.', '2025-11-22', 'late', 4, 'Art Portfolio', '2025-11-16 04:54:10.453499') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.5ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.455563', 'Auto-generated assignment for Diana Patel.', '2025-12-03', 'pending', 4, 'English Essay', '2025-11-16 04:54:10.455563') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.4ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.456920', 'Auto-generated assignment for Diana Patel.', '2025-11-22', 'late', 4, 'Art Portfolio', '2025-11-16 04:54:10.456920') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Create (1.1ms)[0m  [1m[32mINSERT INTO "students" ("created_at", "email", "name", "updated_at") VALUES ('2025-11-16 04:54:10.458153', 'ethan.brown@example.com', 'Ethan Brown', '2025-11-16 04:54:10.458153') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.4ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.459982', 'Auto-generated assignment for Ethan Brown.', '2025-11-21', 'pending', 5, 'English Essay', '2025-11-16 04:54:10.459982') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.4ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.461203', 'Auto-generated assignment for Ethan Brown.', '2025-12-02', 'pending', 5, 'Programming Project', '2025-11-16 04:54:10.461203') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (1.1ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.462423', 'Auto-generated assignment for Ethan Brown.', '2025-11-22', 'pending', 5, 'Art Portfolio', '2025-11-16 04:54:10.462423') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.5ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.464429', 'Auto-generated assignment for Ethan Brown.', '2025-11-26', 'late', 5, 'English Essay', '2025-11-16 04:54:10.464429') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.4ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.465700', 'Auto-generated assignment for Ethan Brown.', '2025-11-18', 'late', 5, 'Art Portfolio', '2025-11-16 04:54:10.465700') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("created_at", "email", "name", "updated_at") VALUES ('2025-11-16 04:54:10.467543', 'fiona.smith@example.com', 'Fiona Smith', '2025-11-16 04:54:10.467543') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.4ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.468700', 'Auto-generated assignment for Fiona Smith.', '2025-11-16', 'submitted', 6, 'Math Homework', '2025-11-16 04:54:10.468700') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.4ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.470478', 'Auto-generated assignment for Fiona Smith.', '2025-11-22', 'submitted', 6, 'Math Homework', '2025-11-16 04:54:10.470478') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.4ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.471714', 'Auto-generated assignment for Fiona Smith.', '2025-12-05', 'pending', 6, 'English Essay', '2025-11-16 04:54:10.471714') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.4ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.472931', 'Auto-generated assignment for Fiona Smith.', '2025-12-02', 'pending', 6, 'English Essay', '2025-11-16 04:54:10.472931') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Create (0.4ms)[0m  [1m[32mINSERT INTO "assignments" ("completed", "created_at", "description", "due_date", "status", "student_id", "title", "updated_at") VALUES (NULL, '2025-11-16 04:54:10.474748', 'Auto-generated assignment for Fiona Smith.', '2025-11-21', 'pending', 6, 'History Reading', '2025-11-16 04:54:10.474748') RETURNING "id" /*application='StudentTracker'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='StudentTracker'*/[0m
+  [1m[36mStudent Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "students" /*application='StudentTracker'*/[0m
+  [1m[36mAssignment Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments" /*application='StudentTracker'*/[0m
+Started GET "/students" for 127.0.0.1 at 2025-11-15 20:54:20 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='StudentTracker'*/[0m
+Processing by StudentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" /*action='index',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/index.html.erb:28
+  Rendered students/index.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 20:54:26 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:63:in 'StudentsController#set_student'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered students/show.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 20:55:31 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (1.7ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:63:in 'StudentsController#set_student'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered students/show.html.erb within layouts/application (Duration: 8.5ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | GC: 0.0ms)
+Completed 200 OK in 26ms (Views: 12.7ms | ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 20:59:53 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:22
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:24
+  Rendered students/show.html.erb within layouts/application (Duration: 9.5ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 12.1ms | ActiveRecord: 2.2ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2025-11-15 21:00:17 -0800
+Processing by StudentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (3.3ms)[0m  [1m[34mSELECT "students".* FROM "students" /*action='index',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/index.html.erb:28
+  Rendered students/index.html.erb within layouts/application (Duration: 9.2ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 16.6ms | ActiveRecord: 3.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2025-11-15 21:00:19 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mStudent Load (1.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 3 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 3 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 3 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:22
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 3 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:24
+  Rendered students/show.html.erb within layouts/application (Duration: 7.9ms | GC: 0.4ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | GC: 0.4ms)
+Completed 200 OK in 24ms (Views: 9.3ms | ActiveRecord: 1.5ms (4 queries, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2025-11-15 21:00:25 -0800
+Processing by StudentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" /*action='index',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/index.html.erb:28
+  Rendered students/index.html.erb within layouts/application (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:00:28 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:22
+  [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:24
+  Rendered students/show.html.erb within layouts/application (Duration: 4.3ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 5.4ms | ActiveRecord: 0.7ms (4 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:00:58 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:24
+  [1m[36mAssignment Load (0.0ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:26
+  Rendered students/show.html.erb within layouts/application (Duration: 3.9ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 7.0ms | ActiveRecord: 1.1ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:01:30 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:24
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:26
+  Rendered students/show.html.erb within layouts/application (Duration: 8.3ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | GC: 0.1ms)
+Completed 200 OK in 23ms (Views: 11.4ms | ActiveRecord: 3.1ms (4 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:01:41 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:22
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:24
+  Rendered students/show.html.erb within layouts/application (Duration: 4.2ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 8.7ms | ActiveRecord: 1.8ms (4 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:01:58 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:22
+  [1m[36mAssignment Load (0.0ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:24
+  Rendered students/show.html.erb within layouts/application (Duration: 3.8ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 7.0ms | ActiveRecord: 1.0ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:02:25 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:22
+  [1m[36mAssignment Load (0.0ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:24
+  Rendered students/show.html.erb within layouts/application (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 6.4ms | ActiveRecord: 1.1ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:02:33 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:22
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:24
+  Rendered students/show.html.erb within layouts/application (Duration: 4.6ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 6.8ms | ActiveRecord: 1.1ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:03:42 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:28
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:30
+  Rendered students/show.html.erb within layouts/application (Duration: 9.9ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | GC: 0.0ms)
+Completed 200 OK in 27ms (Views: 15.3ms | ActiveRecord: 3.1ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:03:52 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:29
+  Rendered students/show.html.erb within layouts/application (Duration: 4.8ms | GC: 0.1ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | GC: 0.3ms)
+Completed 200 OK in 16ms (Views: 7.8ms | ActiveRecord: 1.0ms (4 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:04:42 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:29
+  Rendered students/show.html.erb within layouts/application (Duration: 4.3ms | GC: 0.2ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | GC: 0.2ms)
+Completed 200 OK in 17ms (Views: 7.2ms | ActiveRecord: 1.5ms (4 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:04:51 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:24
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:26
+  Rendered students/show.html.erb within layouts/application (Duration: 6.9ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | GC: 0.0ms)
+Completed 200 OK in 25ms (Views: 10.9ms | ActiveRecord: 1.1ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:06:33 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:32
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:34
+  Rendered students/show.html.erb within layouts/application (Duration: 11.5ms | GC: 0.1ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | GC: 0.1ms)
+Completed 200 OK in 28ms (Views: 15.0ms | ActiveRecord: 3.2ms (4 queries, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:06:49 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:32
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:34
+  Rendered students/show.html.erb within layouts/application (Duration: 3.4ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | GC: 0.3ms)
+Completed 200 OK in 14ms (Views: 6.2ms | ActiveRecord: 1.3ms (4 queries, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:07:11 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 4.4ms | GC: 0.3ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | GC: 0.6ms)
+Completed 200 OK in 16ms (Views: 7.3ms | ActiveRecord: 1.0ms (4 queries, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:07:33 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:32
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:34
+  Rendered students/show.html.erb within layouts/application (Duration: 4.2ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.2ms)
+Completed 200 OK in 16ms (Views: 7.3ms | ActiveRecord: 1.3ms (4 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:08:35 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 4.0ms | GC: 0.4ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | GC: 0.7ms)
+Completed 200 OK in 15ms (Views: 7.2ms | ActiveRecord: 0.9ms (4 queries, 0 cached) | GC: 1.4ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:09:19 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.0ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 3.9ms | GC: 0.1ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | GC: 0.1ms)
+Completed 200 OK in 15ms (Views: 7.2ms | ActiveRecord: 1.1ms (4 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:09:59 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 3.8ms | GC: 0.3ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.5ms)
+Completed 200 OK in 15ms (Views: 6.9ms | ActiveRecord: 1.0ms (4 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:10:22 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 6.4ms | ActiveRecord: 1.1ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:11:23 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 5.2ms | GC: 0.3ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | GC: 0.4ms)
+Completed 200 OK in 17ms (Views: 8.2ms | ActiveRecord: 1.4ms (4 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:11:26 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 5.0ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 6.5ms | ActiveRecord: 0.9ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:11:27 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 4.6ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 6.8ms | ActiveRecord: 0.7ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:13:09 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 3.8ms | GC: 0.1ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | GC: 0.3ms)
+Completed 200 OK in 18ms (Views: 7.0ms | ActiveRecord: 2.3ms (4 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:13:24 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 8.2ms | GC: 0.7ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | GC: 0.7ms)
+Completed 200 OK in 28ms (Views: 13.9ms | ActiveRecord: 2.9ms (4 queries, 0 cached) | GC: 1.6ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:13:57 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.0ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 6.3ms | ActiveRecord: 0.9ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:15:35 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 10.8ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | GC: 0.0ms)
+Completed 200 OK in 28ms (Views: 13.7ms | ActiveRecord: 4.2ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:15:52 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 3.7ms | GC: 0.3ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | GC: 0.6ms)
+Completed 200 OK in 28ms (Views: 7.5ms | ActiveRecord: 1.1ms (4 queries, 0 cached) | GC: 9.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:16:02 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.0ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 3.7ms | GC: 0.3ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.7ms)
+Completed 200 OK in 16ms (Views: 7.0ms | ActiveRecord: 1.4ms (4 queries, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:19:05 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 11.3ms | GC: 0.1ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | GC: 0.2ms)
+Completed 200 OK in 25ms (Views: 14.5ms | ActiveRecord: 3.1ms (4 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:19:33 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 3.9ms | GC: 0.1ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.1ms)
+Completed 200 OK in 16ms (Views: 7.1ms | ActiveRecord: 1.2ms (4 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:20:10 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 7.7ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | GC: 0.0ms)
+Completed 200 OK in 34ms (Views: 11.6ms | ActiveRecord: 2.8ms (4 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:20:20 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 4.0ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 8.6ms | ActiveRecord: 2.0ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:23:10 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 10.1ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | GC: 0.2ms)
+Completed 200 OK in 25ms (Views: 12.8ms | ActiveRecord: 3.4ms (4 queries, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:23:34 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 4.9ms | GC: 0.2ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | GC: 0.2ms)
+Completed 200 OK in 18ms (Views: 7.9ms | ActiveRecord: 1.5ms (4 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:23:44 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 4.0ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 6.7ms | ActiveRecord: 1.2ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:23:59 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 4.3ms | GC: 0.1ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | GC: 0.1ms)
+Completed 200 OK in 16ms (Views: 7.0ms | ActiveRecord: 1.1ms (4 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:24:03 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 7.2ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 10.0ms | ActiveRecord: 1.1ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:24:12 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 3.6ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 6.2ms | ActiveRecord: 3.1ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:24:16 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 7.4ms | GC: 0.4ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | GC: 0.6ms)
+Completed 200 OK in 21ms (Views: 9.9ms | ActiveRecord: 3.3ms (4 queries, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:24:49 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 5.7ms | GC: 0.2ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | GC: 0.2ms)
+Completed 200 OK in 19ms (Views: 9.4ms | ActiveRecord: 1.2ms (4 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:25:02 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 5.2ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | GC: 4.1ms)
+Completed 200 OK in 28ms (Views: 15.1ms | ActiveRecord: 1.5ms (4 queries, 0 cached) | GC: 4.1ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:25:55 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 4.1ms | GC: 0.1ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | GC: 0.2ms)
+Completed 200 OK in 18ms (Views: 8.1ms | ActiveRecord: 1.1ms (4 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:26:01 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 4.8ms | GC: 0.5ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | GC: 0.8ms)
+Completed 200 OK in 24ms (Views: 11.3ms | ActiveRecord: 1.1ms (4 queries, 0 cached) | GC: 4.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:26:08 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.0ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 3.8ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 6.1ms | ActiveRecord: 1.0ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:26:43 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 3.7ms | GC: 0.1ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | GC: 0.1ms)
+Completed 200 OK in 14ms (Views: 6.3ms | ActiveRecord: 1.0ms (4 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:26:50 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 4.3ms | GC: 0.2ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | GC: 0.2ms)
+Completed 200 OK in 15ms (Views: 6.9ms | ActiveRecord: 1.4ms (4 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2025-11-15 21:26:55 -0800
+Processing by StudentsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStudent Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:66:in 'StudentsController#set_student'
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1[0m
+  ↳ app/controllers/students_controller.rb:11:in 'StudentsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mAssignment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "assignments" WHERE "assignments"."student_id" = 1 LIMIT 1 /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:25
+  [1m[36mAssignment Load (0.1ms)[0m  [1m[34mSELECT "assignments".* FROM "assignments" WHERE "assignments"."student_id" = 1 ORDER BY "assignments"."due_date" ASC /*action='show',application='StudentTracker',controller='students'*/[0m
+  ↳ app/views/students/show.html.erb:27
+  Rendered students/show.html.erb within layouts/application (Duration: 3.9ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 6.4ms | ActiveRecord: 1.2ms (4 queries, 0 cached) | GC: 0.0ms)
+
+

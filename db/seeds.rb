@@ -1,31 +1,45 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
-
-# Clear existing data (optional)
+# Reset database
+puts "Clearing old data..."
 Assignment.destroy_all
 Student.destroy_all
 
-# Create students
-students = Student.create!([
-  { name: "Alice Johnson", email: "alice@example.com" },
-  { name: "Bob Smith", email: "bob@example.com" },
-  { name: "Charlie Lee", email: "charlie@example.com" }
-])
+# Sample data
+STUDENT_NAMES = [
+  "Alice Johnson",
+  "Bob Martinez",
+  "Charlie Kim",
+  "Diana Patel",
+  "Ethan Brown",
+  "Fiona Smith"
+]
 
-# Create assignments for each student
-students.each do |student|
-  student.assignments.create!([
-    { title: "Math Homework",     due_date: Date.today + 1, completed: false },
-    { title: "Science Project",   due_date: Date.today + 3, completed: false },
-    { title: "History Essay",     due_date: Date.today + 5, completed: true  }
-  ])
+SUBJECTS = [
+  "Math Homework",
+  "Science Lab",
+  "English Essay",
+  "History Reading",
+  "Programming Project",
+  "Art Portfolio"
+]
+
+STATUSES = ["pending", "submitted", "late"]
+
+puts "Creating students and assignments..."
+
+STUDENT_NAMES.each do |full_name|
+  email = full_name.downcase.gsub(" ", ".") + "@example.com"
+  student = Student.create!(name: full_name, email: email)
+
+  rand(2..5).times do
+    Assignment.create!(
+      student: student,
+      title: SUBJECTS.sample,
+      description: "Auto-generated assignment for #{student.name}.",
+      status: STATUSES.sample,
+      due_date: Date.today + rand(1..21)
+    )
+  end
 end
 
+puts "Done!"
 puts "Seeded #{Student.count} students and #{Assignment.count} assignments."
