@@ -12,7 +12,8 @@ class AssignmentsController < ApplicationController
 
   # GET /assignments/new
   def new
-    @assignment = Assignment.new
+    @student = Student.find(params[:student_id])
+    @assignment = @student.assignments.new
   end
 
   # GET /assignments/1/edit
@@ -21,18 +22,16 @@ class AssignmentsController < ApplicationController
 
   # POST /assignments or /assignments.json
   def create
-    @assignment = Assignment.new(assignment_params)
+    @student = Student.find(params[:student_id])
+    @assignment = @student.assignments.new(assignment_params)
 
-    respond_to do |format|
-      if @assignment.save
-        format.html { redirect_to @assignment, notice: "Assignment was successfully created." }
-        format.json { render :show, status: :created, location: @assignment }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @assignment.errors, status: :unprocessable_entity }
-      end
+    if @assignment.save
+      redirect_to @student, notice: "Assignment was successfully created."
+    else
+      render :new, status: :unprocessable_entity
     end
   end
+
 
   # PATCH/PUT /assignments/1 or /assignments/1.json
   def update
@@ -60,11 +59,12 @@ class AssignmentsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_assignment
-      @assignment = Assignment.find(params.expect(:id))
+      @assignment = Assignment.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def assignment_params
-      params.expect(assignment: [ :title, :due_date, :completed, :student_id ])
+      params.require(:assignment).permit(:title, :description, :due_date, :completed)
     end
+
 end

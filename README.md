@@ -66,6 +66,7 @@ Rails Console Command:
 rails console
 
 Things Learned:
-Keep instructions scoped to one step at a time for AI to have better context.
+*Keep instructions scoped to one step at a time for AI to have better context.
 AI is not great with styling.
-Create a problem and AI usually has much better chance of figuring out the original issue. Ex. Tailwind was collapsing a div with a button inside. Adding a border fixed the issue and revealed something subtle about the way tailwind handles rendering.
+*Create a problem and AI usually has much better chance of figuring out the original issue. Ex. Tailwind was collapsing a div with a button inside. Adding a border fixed the issue and revealed something subtle about the way tailwind handles rendering.
+\*AI is available within the dev console of chrome for further debugging

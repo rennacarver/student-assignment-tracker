@@ -1,9 +1,30 @@
-<% content_for :title, "New assignment" %>
+<div class="block"><h1 class="text-2xl font-bold mb-4">New Assignment</h1></div>
 
-<div class="md:w-2/3 w-full">
-  <h1 class="font-bold text-4xl">New assignment</h1>
+<div class="block">
+  <%= form_with model: [@student, @assignment], local: true do |f| %>
+  <div class="mb-4">
+    <%= f.label :title, class: "font-semibold" %>
+    <%= f.text_field :title, class: "w-full border p-2 rounded" %>
+  </div>
 
-  <%= render "form", assignment: @assignment %>
+  <div class="mb-4">
+    <%= f.label :description, class: "font-semibold" %>
+    <%= f.text_area :description, class: "w-full border p-2 rounded" %>
+  </div>
 
-  <%= link_to "Back to assignments", assignments_path, class: "w-full sm:w-auto text-center mt-2 sm:mt-0 sm:ml-2 rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium" %>
+  <div class="mb-4">
+    <%= f.label :due_date, class: "font-semibold" %>
+    <%= f.date_field :due_date, class: "w-full border p-2 rounded" %>
+  </div>
+
+  <div class="flex gap-4 mt-6">
+  <%= f.submit "Create Assignment",
+        class: "px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700" %>
+
+  <%= link_to "Cancel",
+        student_path(@student),
+        class: "px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300" %>
+</div>
+
+<% end %>
 </div>

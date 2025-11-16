@@ -13,8 +13,8 @@
   <%= link_to "Back to students", students_path, class: "w-full sm:w-auto text-center mt-2 sm:mt-0 sm:ml-2 rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium" %>
   <%= button_to "Destroy this student", @student, method: :delete, form_class: "sm:inline-block mt-2 sm:mt-0 sm:ml-2", class: "w-full rounded-md px-3.5 py-2.5 text-white bg-red-600 hover:bg-red-500 font-medium cursor-pointer", data: { turbo_confirm: "Are you sure?" } %>
 
-  <div class="pt-8 mt-10 p-6 rounded-3xl bg-gray-200 mb-10 overflow-hidden">
-      <div class="pt-1 mt-4 mb-4">
+  <div class="pt-8 mt-4 p-6 rounded-xl bg-gray-200 mb-10">
+      <div class="mt-4 mb-4">
         <%= link_to "New Assignment",
             new_student_assignment_path(@student),
             class: "px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
