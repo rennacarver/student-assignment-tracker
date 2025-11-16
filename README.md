@@ -1,72 +1,40 @@
-# README
+# Student Assignment Tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<img width="825" height="825" alt="Screenshot 2025-11-15 at 11 55 25 PM" src="https://github.com/user-attachments/assets/2701e7d7-2157-4e13-80e4-1acb06abbeb7" />
 
-Things you may want to cover:
+## Motivation
 
-- Ruby version
+Project Carver needs a platform where students can chat with their tutors, see their assignments, see upcoming classes, pay for completed lesssons, and more. This is a first attempt to begin building that platform. Ruby on Rails was used to compare with a JS/Express/Node stack.
 
-- System dependencies
+## Features
 
-- Configuration
+- Add, edit, and delete students from the student list
+- Add, edit, delete, and mark completed on assignments
 
-- Database creation
+## Future enhancements
+- User accounts and authentication for students and tutors
+- Scheduling, payment, assignment picture upload, and chat features
+- Dark mode toggle
+- Style overhaul to match Project Carver theme
 
-- Database initialization
+## Lessons Learned
+- Keep instructions scoped to one step at a time for AI to have better context
+- sometimes AI performs better with context and sometimes better without
+- GPT-5 mini within coPilot tends to struggle compared to the full webapp on finding bugs (less context is better)
+- AI is not great with finding good CSS styles or finding styling bugs
+- Silly human errors like running the server but not the asset watcher won't be caught by AI
+- Create a problem and AI usually has much better chance of figuring out the original issue. Ex. Tailwind was collapsing a div with a button inside. Adding a border fixed the issue and revealed something subtle about the way tailwind handles rendering.
+- AI is available within the dev console of chrome for further debugging
 
-- How to run the test suite
-
-- Services (job queues, cache servers, search engines, etc.)
-
-- Deployment instructions
-
-- ...
-
-- Getting Started with Rails:
-
-1. Create the Project
-   rails new assignment_tracker
-2. Create the database
-   bin/rails db:create
-3. Start the server
-   bin/rails server
-4. Generate the database models
-   bin/rails g model Student name:string email:string
-   bin/rails g model Assignment title:string due_date:date completed:boolean student:references
-5. Migrate the database
-   bin/rails db:migrate
-6. Add controllers and routes
-   bin/rails g controller Students index show
-   bin/rails g controller Assignments index show
-   In config/routes.rb
-   resources :students do
-   resources :assignments
-   end
-   Defines the root path route ("/")
-   root "assignments#index"
-7. Update Models
-   Student
-   has_many :assignments, dependent: :destroy
-   Assignments
-   belongs_to :student
-8. Add seeds
-   bin/rails db:seed
-   or RESET
-   bin/rails db:reset
-9. Start asset watcher
-   bin/dev
-10. Add hot reload (webpage refreshes on file saves)
-    In Gemfile
-    group :development do
-    gem "rails_live_reload"
-    end
-
-Rails Console Command:
-rails console
-
-Things Learned:
-*Keep instructions scoped to one step at a time for AI to have better context.
-AI is not great with styling.
-*Create a problem and AI usually has much better chance of figuring out the original issue. Ex. Tailwind was collapsing a div with a button inside. Adding a border fixed the issue and revealed something subtle about the way tailwind handles rendering.
-\*AI is available within the dev console of chrome for further debugging
+## Challenges
+- By integrating the assignments into the students show page, it caused quite a few conflicts with nested routes
+     - student_assignments_path(@student)
+     - student_assignment_path(@student, @assignment)
+     - edit_student_assignment_path(@student, @assignment)
+- 'before_action' side effects
+     - before_action :set_student needed to be set before :set_assignment
+     - the set_student had to account for two cases (new vs. existing)
+- form builders (form_with) need the correct model
+     - form_with model: assignment
+     - form_with model: @student, @assignment
+- redirect paths after CRUD actions had to be rebuilt after scaffolding because of nested routes
